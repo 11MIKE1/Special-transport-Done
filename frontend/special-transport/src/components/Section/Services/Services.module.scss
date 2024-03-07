@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Josefin+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;400;500;600;700&family=Prompt:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import '../../../SCSS/vars';
+
+
+.Services {
+    max-width: 91.667%;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    .Services_title {
+        h2 {
+            font-family: $fontMontserrat;
+            font-weight: 600;
+            font-size: 40px;
+            color: #1E1E1E;
+            text-align: center;
+        }
+    }
+
+    .ServicesBox {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin-top: 80px;
+
+
+        .serviceCard {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--light-gray, #C7C7C7);
+            border-radius: 30px 10px 10px 30px;
+
+            &:nth-child(2) {
+                border-radius: 10px 30px 30px 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .serviceImg {
+                    img {
+                        border-radius: 0 30px 30px 0;
+                    }
+                }
+
+                .serviceCardAbout {
+                    flex: 0 1 30%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    align-items: end;
+                }
+
+            }
+
+
+            .serviceImg {
+                width: 69%;
+
+                img {
+                    width: 100%;
+                    border-radius: 30px 0 0 30px;
+                }
+            }
+
+            .serviceCardAbout {
+                flex: 0 1 30%;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+
+
+                .OurService {
+                    font-family: $fontMontserrat;
+                    font-weight: 700;
+                    color: #19191BB2;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                }
+
+                .serviceCardName {
+                    font-family: $fontMontserrat;
+                    font-weight: 700;
+                    font-size: 26px;
+                    color: #1E1E1E;
+                }
+
+                .btnContact {
+                    width: 187px;
+                    // padding: 20px;
+                    height: 65px;
+                    background-color: #FFCD12;
+                    text-align: center;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    font-family: $fontMontserrat;
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: #1E1E1E;
+                }
+            }
+        }
+
+    }
+}
+
+
+// ============= media
+
+@media (min-width: 1024px) and (max-width:1290px) {
+    .Services .Services_title h2 {
+        font-size: 35px;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceCardAbout .serviceCardName {
+        font-size: 22px;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceCardAbout .btnContact {
+        font-size: 22px;
+        width: 150px;
+    }
+
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+    .Services .Services_title h2 {
+        font-size: 32px;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceCardAbout .serviceCardName {
+        font-size: 18px;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceCardAbout .btnContact {
+        font-size: 18px;
+        width: 130px;
+        height: 55px;
+    }
+}
+
+@media (min-width:425px) and (max-width:767px) {
+    .Services .Services_title h2 {
+        font-size: 28px;
+    }
+
+    .Services .ServicesBox .serviceCard {
+        flex-direction: column;
+        border-radius: 20px;
+    }
+
+    .Services .ServicesBox .serviceCard:nth-child(2) {
+        flex-direction: column-reverse;
+        border-radius: 20px;
+
+    }
+
+    .Services .ServicesBox .serviceCard:nth-child(2) .serviceCardAbout {
+        align-items: center;
+    }
+
+    .Services .ServicesBox .serviceCard:nth-child(2) .serviceImg img {
+        border-radius: 20px 20px 0px 0px;
+    }
+
+
+    .Services .ServicesBox .serviceCard .serviceImg img {
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceImg {
+        width: 100%;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceCardAbout {
+        margin: 20px 0;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceCardAbout {
+        align-items: center;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceCardAbout .OurService {
+        font-size: 9px;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceCardAbout .serviceCardName {
+        font-size: 12px;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceCardAbout .btnContact {
+        font-size: 12px;
+        width: 100px;
+        height: 30px;
+    }
+}
+
+
+@media screen and (max-width:424px) {
+
+    .Services .ServicesBox .serviceCard {
+        flex-direction: column;
+        border-radius: 20px;
+    }
+
+    .Services .ServicesBox .serviceCard:nth-child(2) {
+        flex-direction: column-reverse;
+        border-radius: 20px;
+
+    }
+
+    .Services .ServicesBox .serviceCard:nth-child(2) .serviceCardAbout {
+        align-items: center;
+    }
+
+    .Services .ServicesBox .serviceCard:nth-child(2) .serviceImg img {
+        border-radius: 20px 20px 0px 0px;
+    }
+
+
+    .Services .ServicesBox .serviceCard .serviceImg img {
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceImg {
+        width: 100%;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceCardAbout {
+        margin: 20px 0;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceCardAbout {
+        align-items: center;
+    }
+
+    .Services .Services_title h2 {
+        font-size: 28px;
+    }
+
+
+    .Services .ServicesBox .serviceCard .serviceCardAbout .OurService {
+        font-size: 9px;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceCardAbout .serviceCardName {
+        font-size: 12px;
+    }
+
+    .Services .ServicesBox .serviceCard .serviceCardAbout .btnContact {
+        font-size: 12px;
+        width: 100px;
+        height: 30px;
+    }
+}

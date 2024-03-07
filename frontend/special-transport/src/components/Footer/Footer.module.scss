@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Josefin+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;400;500;600;700&family=Prompt:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import '../../SCSS/vars';
+
+footer {
+	height: 20vh;
+	background-color: #fff;
+	// z-index: -1;
+
+	.container {
+		max-width: 1440px;
+		margin: auto;
+	}
+
+	@media (max-width: 1440px) {
+		.container {
+			width: 100%;
+		}
+	}
+
+	.footerBox {
+		max-width: 91.667%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+
+		.footerMenu {
+			display: flex;
+			justify-content: space-between;
+			gap: 10px;
+
+			.footerItems {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 5px;
+
+				h3 {
+					font-family: $fontMontserrat;
+					font-weight: 600;
+					font-size: 14px;
+					color: #000;
+				}
+
+				h4 {
+					font-family: $fontMontserrat;
+					font-weight: 400;
+					font-size: 14px;
+					color: #000;
+				}
+			}
+		}
+	}
+}
+
+.footerBoxTop {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	margin-top: 38px;
+	padding-bottom: 30px;
+
+	.PrivacyPolicyTitle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+
+		.PrivacyPolicyTitleItem {
+			font-family: $fontMontserrat;
+			font-weight: 400;
+			color: #000;
+			font-size: 16px;
+			cursor: pointer;
+		}
+	}
+
+	.FooterBottomTitle {
+		text-align: center;
+
+		.FooterBottomTitleItem {
+			font-family: $fontMontserrat;
+			font-weight: 400;
+			color: #000;
+			font-size: 16px;
+		}
+	}
+}
+
+
+
+@media (min-width: 1024px) and (max-width:1290px) {}
+
+@media (min-width:768px) and (max-width:1023px) {
+	footer .container .footerBox .footerMenu {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+}
+
+@media (max-width:767px) {
+	footer .container .footerBox .footerMenu {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	footer .container .footerBox {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	footer .container .footerBoxTop .PrivacyPolicyTitle {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}

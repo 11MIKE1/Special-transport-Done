@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Josefin+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;400;500;600;700&family=Prompt:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import '../../../SCSS/vars';
+
+.TypeLabel {
+    font-family: $fontMontserrat;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+    margin-left: 10px;
+}
+
+.TypeInput {
+    margin-right: 10px;
+}

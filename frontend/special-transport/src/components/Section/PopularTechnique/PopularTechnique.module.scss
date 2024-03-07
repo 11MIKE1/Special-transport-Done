@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Josefin+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;400;500;600;700&family=Prompt:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import '../../../SCSS/vars';
+
+
+
+.PopularTechnique {
+    max-width: 91.667%;
+    margin: 60px auto;
+
+
+    .PopularTechniqueTitle {
+        font-family: $fontMontserrat;
+        font-weight: 600;
+        font-size: 40px;
+        color: #1E1E1E;
+        text-align: center;
+    }
+
+    & button {
+        background-color: #000000;
+        border-radius: 12px;
+    }
+
+
+    .PopularTechniqueCard {
+        display: flex;
+        height: 450px;
+        max-width: 90%;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 2px 2px 6.1px 0px rgba(0, 0, 0, 0.25);
+        border: 1px solid var(--light-gray, #C7C7C7);
+        padding: 25px;
+        border-radius: 24px;
+        position: relative;
+        margin: 60px 0;
+        cursor: pointer;
+
+
+
+
+        .PopularTechniqueCardName {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .PopularTechniqueName {
+                font-family: $fontMontserrat;
+                font-weight: 500;
+                font-size: 14px;
+                color: #19191BB2;
+            }
+
+            .PopularTechniqueText {
+                font-family: $fontMontserrat;
+                font-weight: 600;
+                font-size: 22px;
+                color: #19191B;
+            }
+        }
+
+
+        .PopularTechniqueCardImg {
+            width: 100%;
+            height: 240px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+
+
+
+        .PopularTechniqueCardPrice {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+
+
+            .PopularTechniquePrice {
+                font-family: $fontMontserrat;
+                font-weight: 600;
+                color: #19191BB2;
+                font-size: 18px;
+            }
+
+            .PopularTechniqueBtn {
+                font-family: $fontMontserrat;
+                font-weight: 400;
+                color: #FFCD12;
+                font-size: 18px;
+                background-color: #fff;
+                padding: 0;
+                margin: 0;
+                border: none;
+
+            }
+        }
+    }
+
+}
+
+
+// ============= media
+
+@media (min-width: 1024px) and (max-width:1290px) {
+    .PopularTechnique .PopularTechniqueCard {
+        height: 380px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardImg {
+        height: 230px;
+    }
+
+    .PopularTechnique .PopularTechniqueTitle {
+        font-size: 35px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardPrice .PopularTechniqueBtn {
+        font-size: 16px;
+        width: 110px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardPrice .PopularTechniquePrice {
+        font-size: 16px;
+    }
+
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+    .PopularTechnique .PopularTechniqueCard {
+        height: 370px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardImg {
+        height: 180px;
+    }
+
+    .PopularTechnique .PopularTechniqueTitle {
+        font-size: 30px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardName .PopularTechniqueText {
+        font-size: 18px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardName .PopularTechniqueName {
+        font-size: 12px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardPrice {
+        width: 70%;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardPrice .PopularTechniqueBtn {
+        font-size: 13px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardPrice .PopularTechniquePrice {
+        font-size: 12px;
+    }
+}
+
+@media (min-width:425px) and (max-width:767px) {
+    .PopularTechnique .PopularTechniqueCard {
+        height: 360px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardImg {
+        height: 180px;
+    }
+
+    .PopularTechnique button {
+        background-color: #fff;
+        // display: none;
+    }
+
+    .PopularTechnique .PopularTechniqueTitle {
+        font-size: 25px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardName .PopularTechniqueText {
+        font-size: 16px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardName .PopularTechniqueName {
+        font-size: 18px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardPrice .PopularTechniqueBtn {
+        font-size: 18px;
+
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardPrice .PopularTechniquePrice {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:424px) {
+    .PopularTechnique .PopularTechniqueCard {
+        height: 400px;
+        padding: 8px;
+    }
+
+
+    .PopularTechnique button {
+        background-color: #fff;
+    }
+
+    .PopularTechnique .PopularTechniqueTitle {
+        font-size: 25px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardName .PopularTechniqueText {
+        font-size: 16px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardName .PopularTechniqueName {
+        font-size: 18px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardPrice .PopularTechniqueBtn {
+        font-size: 16px;
+    }
+
+    .PopularTechnique .PopularTechniqueCard .PopularTechniqueCardPrice .PopularTechniquePrice {
+        font-size: 16px;
+    }
+}

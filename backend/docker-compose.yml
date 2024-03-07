@@ -1,0 +1,96 @@
+version: "3"
+
+services:
+
+  web:
+    container_name: web_service
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    extra_hosts:
+      - "database:172.17.0.1"
+    volumes:
+      - ./static/:/static
+      - ./media/:/media
+      - ./:/app
+    entrypoint: ./wsgi-entrypoint.sh
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 2500M
+    networks:
+      - my_network_test
+
+#  db:
+#      container_name: db_test
+#      image: postgres:15-alpine
+#      volumes:
+#        - postgres_data:/var/lib/postgresql/data/
+#      networks:
+#        - my_network_test
+#      environment:
+#        - POSTGRES_DB=test_db
+#        - POSTGRES_USER=postgres
+#        - POSTGRES_PASSWORD=postgres
+#      restart: always
+#      healthcheck:
+#        test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+#        interval: 30s
+#        timeout: 10s
+#        retries: 5
+#        start_period: 5s
+
+  redis:
+    container_name: redis_docker
+    image: redis:alpine
+    networks:
+      - my_network_test
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  celery:
+    container_name: celery-worker
+    build:
+      context: .
+    command: sh -c "celery -A config worker -l INFO"
+    volumes:
+      - ./:/app
+    depends_on:
+      - redis
+      - web
+    networks:
+      - my_network_test
+    healthcheck:
+      test: [ "CMD-SHELL", "/usr/local/bin/celery_health_check.sh" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+#   nginx:
+#     container_name: cloud_code_nginx
+#     build:
+#       context: ./docker/nginx
+#       dockerfile: Dockerfile
+#     ports:
+#       - "8000:80"
+#       - "4443:443"
+#     volumes:
+#       - ./static/:/static
+#       - ./media/:/media
+#       - ./docker/nginx/certs:/etc/ssl/certs
+#     depends_on:
+#       - cloud_code_web
+#     networks:
+#       - cloud_code_network
+
+volumes:
+  media:
+  static:
+
+networks:
+  my_network_test:

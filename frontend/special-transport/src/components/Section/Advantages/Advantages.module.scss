@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Josefin+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;400;500;600;700&family=Prompt:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import '../../../SCSS/vars';
+
+
+
+
+
+
+.container {
+	max-width: 1440px;
+	margin: auto;
+}
+
+@media(max-width:1440px) {
+	.container {
+		width: 100%;
+	}
+}
+
+.Advantages {
+	max-width: 91.667%;
+	margin: 0 auto;
+	margin-top: 160px;
+
+	.AdvantagesTitle {
+		text-align: center;
+		font-family: $fontMontserrat;
+		font-weight: 600;
+		font-size: 40px;
+		color: #1E1E1E;
+	}
+
+	.AdvantagesBox {
+		margin-top: 60px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+
+		.AdvantagesCard {
+			width: 350px;
+			min-height: 230px;
+			text-align: center;
+			padding: 24px;
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+			box-shadow: 2px 2px 6.1px 0px rgba(0, 0, 0, 0.25);
+			border: 1px solid var(--light-gray, #C7C7C7);
+			border-radius: 7px;
+
+			.AdvantagesCardItem {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 12px;
+
+
+				.AdvantagesCardTitle {
+					font-family: $fontMontserrat;
+					font-weight: 600;
+					font-size: 20px;
+					color: #1E1E1E;
+				}
+
+			}
+
+			.AdvantagesCardParagraf {
+				font-family: $fontMontserrat;
+				font-weight: 400;
+				font-style: normal;
+				font-size: 16px;
+				color: #1e1e1e;
+
+			}
+		}
+	}
+
+}
+
+@media (min-width: 1024px) and (max-width:1290px) {
+	.AdvantagesCard {
+		width: 350px;
+		margin-top: 10px;
+	}
+
+	.container .Advantages .AdvantagesBox {
+		flex-wrap: wrap;
+	}
+
+	.container .Advantages .AdvantagesTitle {
+		font-size: 35px;
+	}
+}
+
+@media (min-width: 768px) and (max-width:1023px) {
+	.AdvantagesCard {
+		width: 350px;
+		margin-top: 10px;
+	}
+
+	.container .Advantages .AdvantagesBox {
+		flex-wrap: wrap;
+	}
+
+	.container .Advantages .AdvantagesTitle {
+		font-size: 32px;
+	}
+}
+
+@media (min-width: 425px) and (max-width:767px) {
+	.AdvantagesCard {
+		width: 350px;
+		margin-top: 10px;
+	}
+
+	.container .Advantages .AdvantagesBox {
+		flex-wrap: wrap;
+	}
+
+	.container .Advantages .AdvantagesBox .AdvantagesCard {
+		margin-top: 10px;
+	}
+
+	.container .Advantages .AdvantagesBox .AdvantagesCard .AdvantagesCardItem .AdvantagesCardTitle {
+		font-size: 16px;
+	}
+
+	.container .Advantages .AdvantagesBox .AdvantagesCard .AdvantagesCardParagraf {
+		font-size: 14px;
+	}
+
+	.container .Advantages .AdvantagesTitle {
+		font-size: 30px;
+	}
+}
+
+@media screen and (max-width:424px) {
+	.AdvantagesCard {
+		max-width: 350px;
+	}
+
+	.container .Advantages .AdvantagesBox {
+		flex-wrap: wrap;
+	}
+
+	.container .Advantages .AdvantagesBox .AdvantagesCard {
+		margin-top: 10px;
+	}
+
+	.container .Advantages .AdvantagesBox .AdvantagesCard .AdvantagesCardItem .AdvantagesCardTitle {
+		font-size: 16px;
+	}
+
+	.container .Advantages .AdvantagesBox .AdvantagesCard .AdvantagesCardParagraf {
+		font-size: 14px;
+	}
+
+	.container .Advantages .AdvantagesTitle {
+		font-size: 30px;
+	}
+}

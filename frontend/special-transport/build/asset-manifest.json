@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.01258372.css",
+    "main.js": "/static/js/main.11498fab.js",
+    "static/media/imagebgh.png": "/static/media/imagebgh.ade30c0f64fbd628861a.png",
+    "static/media/fon-tekstura-matovaia-seryi.jpg": "/static/media/fon-tekstura-matovaia-seryi.f67f586341f8323b6cec.jpg",
+    "static/media/CardServicestations.png": "/static/media/CardServicestations.fde05378b87796ecd877.png",
+    "static/media/CardShipping.png": "/static/media/CardShipping.e8451c0070e3d4998609.png",
+    "static/media/CardRepairwork.png": "/static/media/CardRepairwork.6f9cbd489745461889f6.png",
+    "static/media/grey.jpg": "/static/media/grey.a526df425395ce2a222c.jpg",
+    "index.html": "/index.html",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "main.01258372.css.map": "/static/css/main.01258372.css.map",
+    "main.11498fab.js.map": "/static/js/main.11498fab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01258372.css",
+    "static/js/main.11498fab.js"
+  ]
+}

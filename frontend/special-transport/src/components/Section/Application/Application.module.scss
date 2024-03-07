@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Josefin+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;400;500;600;700&family=Prompt:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import '../../../SCSS/vars';
+
+
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+@media(max-width:1440px) {
+    .container {
+        width: 100%;
+    }
+}
+
+.Application {
+    max-width: 91.667%;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    .ApplicationBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+
+        .ApplicationLeftCard {
+            width: 49%;
+        }
+
+        .ApplicationRightCard {
+            width: 49%;
+
+
+            img {
+                width: 100%;
+            }
+
+        }
+    }
+
+
+}
+
+// ============= media
+
+@media (min-width: 1024px) and (max-width:1290px) {}
+
+@media (min-width:768px) and (max-width:1023px) {}
+
+@media (min-width:425px) and (max-width:767px) {
+    .container .Application .ApplicationBox .ApplicationRightCard {
+        display: none;
+    }
+
+    .container .Application .ApplicationBox .ApplicationLeftCard {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:424px) {
+    .container .Application .ApplicationBox .ApplicationRightCard {
+        display: none;
+    }
+
+    .container .Application .ApplicationBox .ApplicationLeftCard {
+        width: 100%;
+    }
+}

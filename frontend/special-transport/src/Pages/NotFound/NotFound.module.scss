@@ -1,0 +1,36 @@
+.content {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+//==============================
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 834px) {
+	//===
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 480px) {
+	.notFoundImg {
+		width: 400px;
+		height: 400px;
+	}
+}
+
+@media (max-width: 375px) {
+	.container {
+		width: 91.4666667%;
+	}
+
+	.notFoundImg {
+		width: 350px;
+		height: 350px;
+	}
+}

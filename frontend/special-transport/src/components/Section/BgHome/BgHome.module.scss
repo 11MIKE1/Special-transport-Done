@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Josefin+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;400;500;600;700&family=Prompt:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import '../../../SCSS/vars';
+
+.BgHome {
+    background-image: url('../../../assets//Main_images//imagebgh.png');
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 1920px;
+    position: relative;
+    margin: 0 auto 100px;
+
+    .ExcavatorModelsImg {
+        position: absolute;
+        right: 0px;
+        bottom: -100px;
+        width: 50%;
+
+        img {
+            cursor: pointer;
+            width: 100%;
+        }
+
+    }
+
+
+    .container {
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    @media(max-width:1440px) {
+        .container {
+            width: 100%;
+        }
+    }
+
+    .ExcavatorModels {
+        max-width: 91.667%;
+        margin: 0 auto;
+
+        .ExcavatorModelsAbout {
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+
+            .ExcavatorModelsTitle {
+                font-family: $fontMontserrat;
+                font-weight: 600;
+                font-size: 35px;
+                color: #fff;
+                width: 40%;
+            }
+
+            .ExcavatorModelsDescr {
+                font-family: $fontMontserrat;
+                font-weight: 500;
+                font-size: 1.4rem;
+                color: #fff;
+                line-height: 26px;
+                height: 30vh;
+                width: 60%;
+
+            }
+
+            .btnOrder {
+                width: 25%;
+                height: 65px;
+                background-color: #FFCD12;
+                text-align: center;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-family: $fontMontserrat;
+                font-size: 24px;
+                font-weight: 500;
+                color: #1E1E1E;
+            }
+
+
+        }
+    }
+}
+
+@media (max-width: 1920px) {
+    .BgHome {
+        width: 100%;
+        height: 90vh;
+    }
+}
+
+// === media
+
+@media (min-width: 1024px) and (max-width:1290px) {
+    .BgHome {
+        height: 70vh;
+    }
+
+    .BgHome .container .ExcavatorModels .ExcavatorModelsAbout .ExcavatorModelsDescr {
+        font-size: 1.1rem;
+    }
+
+    .BgHome .container .ExcavatorModels .ExcavatorModelsAbout .ExcavatorModelsTitle {
+        font-size: 30px;
+        width: 60%;
+    }
+
+    .BgHome .container .ExcavatorModels .ExcavatorModelsAbout .btnOrder {
+        font-size: 20px;
+    }
+
+
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+    .BgHome {
+        height: 60vh;
+    }
+
+    .BgHome .container .ExcavatorModels .ExcavatorModelsAbout .ExcavatorModelsDescr {
+        font-size: 1rem;
+        line-height: 17px;
+        font-weight: 400;
+        height: 25vh;
+    }
+
+    .BgHome .container .ExcavatorModels .ExcavatorModelsAbout .ExcavatorModelsTitle {
+        font-size: 30px;
+        width: 60%;
+    }
+
+    .BgHome .container .ExcavatorModels .ExcavatorModelsAbout .btnOrder {
+        font-size: 14px;
+        width: 20%;
+        height: 40px;
+    }
+}
+
+@media (min-width:425px) and (max-width:767px) {
+    .BgHome {
+        height: 60vh;
+    }
+
+    .BgHome .container .ExcavatorModels .ExcavatorModelsAbout .ExcavatorModelsDescr {
+        font-size: 1rem;
+        line-height: 17px;
+        font-weight: 400;
+        width: 80%;
+        height: 180px;
+    }
+
+    .BgHome .container .ExcavatorModels .ExcavatorModelsAbout .ExcavatorModelsTitle {
+        font-size: 26px;
+        width: 90%;
+    }
+
+    .BgHome .container .ExcavatorModels .ExcavatorModelsAbout .btnOrder {
+        font-size: 12px;
+        width: 20%;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width:424px) {
+    .BgHome {
+        height: 40vh;
+    }
+
+    .BgHome .container .ExcavatorModels .ExcavatorModelsAbout {
+        gap: 10px;
+    }
+
+    .BgHome .container .ExcavatorModels .ExcavatorModelsAbout .ExcavatorModelsDescr {
+        font-size: 0.8rem;
+        line-height: 17px;
+        font-weight: 400;
+        width: 300px;
+        height: 150px;
+    }
+
+    .BgHome .container .ExcavatorModels .ExcavatorModelsAbout .ExcavatorModelsTitle {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .BgHome .container .ExcavatorModels .ExcavatorModelsAbout {
+        height: 40vh;
+    }
+
+    .BgHome .container .ExcavatorModels .ExcavatorModelsAbout .btnOrder {
+        font-size: 10px;
+        width: 30%;
+        font-weight: 700;
+        height: 40px;
+    }
+
+}

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.container {
+	max-width: 1440px;
+	margin: auto;
+}
+
+@media (max-width: 1440px) {
+	.container {
+		width: 100%;
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 91.667%;
+	margin: 60px auto;
+	gap: 30px;
+
+	& .content {
+		width: 100%;
+		min-height: 360px;
+		display: flex;
+		justify-content: space-between;
+		border-radius: 14px;
+		box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.25);
+
+		& img {
+			max-width: 100%;
+			min-height: 360px;
+			border-radius: 14px 0 0 14px;
+		}
+
+		& .content_text {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 34.5px 35px;
+			gap: 32px;
+
+			& .content_title {
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+
+				& h3 {
+					color: rgba(25, 25, 27, 0.7);
+					font-family: 'Montserrat', sans-serif;
+					font-size: 14px;
+					font-weight: 700;
+					line-height: 26px;
+					letter-spacing: 2px;
+					text-align: left;
+					text-transform: uppercase;
+				}
+
+				& h2 {
+					color: rgb(25, 25, 27);
+					font-family: 'Montserrat', sans-serif;
+					font-size: 26px;
+					font-weight: 700;
+					line-height: 120%;
+					letter-spacing: -0.4px;
+					text-align: left;
+				}
+			}
+
+			& p {
+				color: rgba(25, 25, 27, 0.8);
+				font-family: 'Montserrat', sans-serif;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 26px;
+				letter-spacing: 0px;
+				text-align: left;
+			}
+
+			& button {
+				width: 168px;
+				height: 60px;
+				border-radius: 7px;
+				background: rgb(255, 205, 18);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 18px 38px 18px 38px;
+
+				color: rgb(30, 30, 30);
+				font-family: 'Montserrat', sans-serif;
+				font-size: 20px;
+				font-weight: 500;
+				line-height: 120%;
+			}
+		}
+	}
+}
+
+//========================================
+
+@media (max-width: 768px) {
+	.content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.wrapper .content img {
+		border-radius: 14px;
+	}
+
+	.wrapper .content .content_text .content_title h3 {
+		text-align: center;
+	}
+	.wrapper .content .content_text .content_title h2 {
+		text-align: center;
+	}
+	.wrapper .content .content_text p {
+		text-align: center;
+	}
+}
+
+@media (max-width: 360px) {
+	.wrapper .content .content_text button {
+		width: 100%;
+	}
+}

@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Josefin+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;400;500;600;700&family=Prompt:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import '../../SCSS/vars';
+
+
+.SEquipment {
+    margin: 60px 0;
+
+    .container {
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    @media (max-width:1440px) {
+        .container {
+            width: 100%;
+        }
+    }
+
+    .SettingBurger {
+        max-width: 91.667%;
+        display: none;
+        margin: 0 auto;
+    }
+
+
+    .SEquipmentBox {
+        max-width: 91.667%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .SEquipmentLeftBox {
+
+            .SEquipmentLeftCard {
+                width: 310px;
+                height: auto;
+                background-color: #Fff;
+                box-shadow: 2px 2px 6.1px 0px rgba(0, 0, 0, 0.25);
+                border: 1px solid var(--light-gray, #C7C7C7);
+                position: fixed;
+                top: 12rem;
+
+                .findBtnCard {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .findBtn {
+                        background-color: #FFCD12;
+                        text-align: center;
+                        font-size: 18px;
+                        height: 40px;
+                        width: 100%;
+                        border-radius: 10px;
+                        margin-top: 10px;
+                        text-align: center;
+                    }
+
+                }
+
+
+                .searchButtton {
+                    width: 250px;
+                    height: 30px;
+                    border: 1px solid black;
+                    margin: 10px auto;
+                    border-radius: 7px;
+                    display: flex;
+                    justify-content: center;
+                    padding: 5px;
+                }
+            }
+
+        }
+
+
+        .SEquipmentRightCard {
+            width: 73%;
+            position: relative;
+
+
+            .pagination {
+                margin-top: 50px;
+                display: flex;
+                justify-content: center;
+
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) and (max-width:1290px) {
+    .SEquipmentLeftCard {
+        display: none;
+    }
+
+    .SEquipment .container .SettingBurger {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+    .SEquipment .container .SEquipmentBox .SEquipmentRightCard {
+        width: 90%;
+        margin: 40px auto;
+
+
+    }
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+    .SEquipmentLeftCard {
+        display: none;
+    }
+
+    .SEquipment .container .SettingBurger {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .SEquipment .container .SEquipmentBox .SEquipmentRightCard {
+        width: 90%;
+        margin: 40px auto;
+
+    }
+
+}
+
+@media (min-width:425px) and (max-width:767px) {
+    .SEquipmentLeftCard {
+        display: none;
+    }
+
+    .SEquipment .container .SettingBurger {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .SEquipment .container .SEquipmentBox .SEquipmentRightCard {
+        width: 100%;
+        margin: 40px 0;
+
+    }
+
+}
+
+@media (max-width:424px) {
+    .SEquipmentLeftCard {
+        display: none;
+    }
+
+    .SEquipment .container .SettingBurger {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+
+    .SEquipment .container .SEquipmentBox .SEquipmentRightCard {
+        width: 100%;
+        margin: 40px 0;
+
+    }
+
+
+}

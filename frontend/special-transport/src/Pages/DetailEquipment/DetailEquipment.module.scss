@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Josefin+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;400;500;600;700&family=Prompt:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import '../../SCSS/vars';
+
+.DetailEquipment {
+    margin: 100px 0;
+
+    .container {
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    @media(max-width:1440px) {
+        .container {
+            width: 100%;
+        }
+    }
+
+    .DetailEquipmentBox {
+        max-width: 91.667%;
+        margin: 100px auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        position: relative;
+
+        .DetailEquipmentLeftCard {
+            display: flex;
+            flex-direction: column;
+            width: 650px;
+            height: 690px;
+        }
+
+        .DetailEquipmentRightCard {
+            flex: 0 1 48%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .DetailName {
+                font-family: $fontMontserrat;
+                font-weight: 700;
+                font-size: 42px;
+                color: #1E1E1E;
+            }
+
+            .DetailPrice {
+                font-family: $fontMontserrat;
+                font-weight: 700;
+                font-size: 24px;
+                color: #1E1E1E;
+            }
+
+            .DetailBtn {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+
+
+                .detailbtnitem {
+                    width: 190px;
+                    height: 45px;
+                    border: 1px solid #000;
+                    border-radius: 10px;
+                    background-color: #fff;
+                    cursor: pointer;
+                    font-family: $fontMontserrat;
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #1E1E1E;
+                    transition: 3s ease;
+                    margin-top: 10px;
+
+
+                    &.detailbtnitem:hover {
+                        background-color: #FFCD12;
+
+                    }
+
+                }
+
+            }
+
+            .DetailDescription {
+                font-family: $fontMontserrat;
+                font-weight: 500;
+                font-size: 24px;
+                color: #1E1E1E;
+                line-height: 30px;
+                min-height: 30vh;
+                overflow-y: auto;
+
+            }
+
+            .detailApBkBtn {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+
+                .detailIcon {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    align-self: flex-end;
+                    gap: 10px;
+                    width: 200px;
+
+                }
+
+                .ApplicationBtn {
+                    width: 200px;
+                    height: 65px;
+                    background-color: #FFCD12;
+                    text-align: center;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    font-family: $fontMontserrat;
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: #1E1E1E;
+                    margin-top: 10px;
+                }
+
+
+
+                .btnBack {
+                    width: 200px;
+                    height: 65px;
+                    background-color: #FFCD12;
+                    text-align: center;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    font-family: $fontMontserrat;
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: #1E1E1E;
+                    margin-top: 10px;
+                }
+
+            }
+
+
+        }
+
+
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width:1290px) {
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailName {
+        font-size: 30px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailPrice {
+        font-size: 20px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentLeftCard {
+        width: 550px;
+        height: 550px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailDescription {
+        font-size: 20px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard {
+        gap: 15px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailBtn {
+        flex-direction: column;
+        align-self: flex-start;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .detailApBkBtn .ApplicationBtn {
+        width: 150px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .detailApBkBtn .btnBack {
+        width: 150px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailBtn .detailbtnitem {
+        font-size: 16px;
+        width: 170px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailName {
+        font-size: 28px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailPrice {
+        font-size: 18px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentLeftCard {
+        width: 400px;
+        height: 400px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailDescription {
+        font-size: 20px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard {
+        gap: 10px;
+    }
+
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .detailApBkBtn .ApplicationBtn {
+        width: 130px;
+        font-size: 20px;
+        height: 50px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .detailApBkBtn .btnBack {
+        width: 130px;
+        font-size: 20px;
+        height: 50px;
+    }
+
+}
+
+@media (min-width:425px) and (max-width:767px) {
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailBtn {
+        width: 80%;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailBtn .detailbtnitem {
+        font-size: 16px;
+        width: 170px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailName {
+        font-size: 28px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailPrice {
+        font-size: 18px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentLeftCard {
+        width: 400px;
+        height: 400px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailDescription {
+        font-size: 20px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard {
+        gap: 10px;
+    }
+
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .detailApBkBtn .ApplicationBtn {
+        width: 130px;
+        font-size: 20px;
+        height: 50px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .detailApBkBtn .btnBack {
+        width: 130px;
+        font-size: 20px;
+        height: 50px;
+    }
+
+    .DetailEquipment .container .DetailEquipmentBox {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width:424px) {
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailBtn {
+        width: 80%;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailBtn .detailbtnitem {
+        font-size: 16px;
+        width: 170px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailName {
+        font-size: 28px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailPrice {
+        font-size: 18px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentLeftCard {
+        width: 300px;
+        height: 350px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .DetailDescription {
+        font-size: 20px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard {
+        gap: 10px;
+    }
+
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .detailApBkBtn .ApplicationBtn {
+        width: 130px;
+        font-size: 20px;
+        height: 50px;
+    }
+
+    .DetailEquipment .DetailEquipmentBox .DetailEquipmentRightCard .detailApBkBtn .btnBack {
+        width: 130px;
+        font-size: 20px;
+        height: 50px;
+    }
+
+    .DetailEquipment .container .DetailEquipmentBox {
+        flex-direction: column;
+    }
+}
